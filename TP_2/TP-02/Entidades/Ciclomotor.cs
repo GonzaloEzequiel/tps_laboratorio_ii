@@ -15,25 +15,27 @@ namespace Entidades
         /// <summary>
         /// Ciclomotor son 'Chico'
         /// </summary>
-        protected short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
-                return 0;
+                return ETamanio.Chico;
             }
         }
 
-        private override sealed string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
+        //ESTE METODO NO TIENE NECESIDAD DE IMPLEMENTACION EN ESTA CLASE
+        //
+        //private override sealed string Mostrar()
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("CICLOMOTOR");
-            sb.AppendLine(this.Mostrar());
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-            sb.AppendLine("");
-            sb.AppendLine("---------------------");
+        //    sb.AppendLine("CICLOMOTOR");
+        //    sb.AppendLine(this.Mostrar());
+        //    sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
+        //    sb.AppendLine("");
+        //    sb.AppendLine("---------------------");
 
-            return sb;
-        }
+        //    return sb;
+        //}
     }
 }
