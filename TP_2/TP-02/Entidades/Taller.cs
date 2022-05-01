@@ -18,7 +18,8 @@ namespace Entidades
             Ciclomotor, Sedan, SUV, Todos
         }
 
-        #region "Constructores"
+        #region CONSTRUCTORES
+
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
@@ -27,9 +28,11 @@ namespace Entidades
         {
             this.espacioDisponible = espacioDisponible;
         }
+
         #endregion
 
-        #region "Sobrecargas"
+        #region SOBRECARGAS
+
         /// <summary>
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
@@ -38,9 +41,59 @@ namespace Entidades
         {
             return Taller.Listar(this, ETipo.Todos);
         }
+
+        /// <summary>
+        /// Agregará un elemento a la lista
+        /// </summary>
+        /// <param name="taller">Objeto donde se agregará el elemento</param>
+        /// <param name="vehiculo">Objeto a agregar</param>
+        /// <returns></returns>
+        public static Taller operator +(Taller taller, Vehiculo vehiculo)
+        {
+            bool repetido = false;
+
+            //verifica que no el taller no esté lleno
+            if (taller.vehiculos.Count < taller.espacioDisponible)
+            {
+                foreach (Vehiculo v in taller.vehiculos)
+                {
+                    //si ya está en la lista lo marca como repetido
+                    if (v == vehiculo)
+                        repetido = true;
+                }
+
+                //si no está repetido lo agrega
+                if (!repetido)
+                    taller.vehiculos.Add(vehiculo);
+            }
+
+            return taller;
+        }
+
+        /// <summary>
+        /// Quitará un elemento de la lista
+        /// </summary>
+        /// <param name="taller">Objeto donde se quitará el elemento</param>
+        /// <param name="vehiculo">Objeto a quitar</param>
+        /// <returns></returns>
+        public static Taller operator -(Taller taller, Vehiculo vehiculo)
+        {
+            foreach (Vehiculo v in taller.vehiculos)
+            {
+                //verifica duplicidad de chasis por sobrecarga de operador
+                if (v == vehiculo)
+                {
+                    taller.vehiculos.Remove(vehiculo);
+                    break;
+                }
+            }
+
+            return taller;
+        }
+
         #endregion
 
-        #region "Métodos"
+        #region METODOS
 
         /// <summary>
         /// Expone los datos del elemento y su lista (incluidas sus herencias)
@@ -57,11 +110,11 @@ namespace Entidades
             sb.AppendLine("");
             foreach (Vehiculo v in taller.vehiculos)
             {
-                //segun el parametro que se le pasa, utilizará la funcion override de esa clase
+                //segun el parametro que se le pasa, utilizará la funcion override implementada en esa clase
                 switch (tipo)
                 {
                     case ETipo.SUV:
-                        //y SOLO lo muestra, si el elemento de la lista es del mismo tipo que la clase
+                        //y SOLO lo muestra en pantalla, si el elemento de la lista es del mismo tipo que la clase
                         if (v is Suv)
                             sb.AppendLine(v.Mostrar());
                         break;
@@ -81,58 +134,9 @@ namespace Entidades
 
             return sb.ToString();
         }
+
         #endregion
-
-        #region "Operadores"
-        /// <summary>
-        /// Agregará un elemento a la lista
-        /// </summary>
-        /// <param name="taller">Objeto donde se agregará el elemento</param>
-        /// <param name="vehiculo">Objeto a agregar</param>
-        /// <returns></returns>
-        public static Taller operator +(Taller taller, Vehiculo vehiculo)
-        {
-            bool repetido = false;
-
-            //verifica que no el taller no esté lleno
-            if (taller.vehiculos.Count < taller.espacioDisponible)
-            {
-                foreach (Vehiculo v in taller.vehiculos)
-                {
-                    //verifica repitencias del mismo elemento en la lista
-                    //(si ya está en la lista lo marca como repetido)
-                    if (v == vehiculo)
-                        repetido = true;
-                }
-
-                if (!repetido)
-                    taller.vehiculos.Add(vehiculo);
-
-            }
-
-            return taller;
-        }
-
-        /// <summary>
-        /// Quitará un elemento de la lista
-        /// </summary>
-        /// <param name="taller">Objeto donde se quitará el elemento</param>
-        /// <param name="vehiculo">Objeto a quitar</param>
-        /// <returns></returns>
-        public static Taller operator -(Taller taller, Vehiculo vehiculo)
-        {
-            foreach (Vehiculo v in taller.vehiculos)
-            {
-                //verifica duplicidad de chasis por sobrecarga de ==
-                if (v == vehiculo)
-                {
-                    taller.vehiculos.Remove(vehiculo);
-                    break;
-                }
-            }
-
-            return taller;
-        }
-        #endregion
+                
+        
     }
 }

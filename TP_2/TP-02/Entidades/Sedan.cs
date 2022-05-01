@@ -13,6 +13,8 @@ namespace Entidades
         public enum ETipo { CuatroPuertas, CincoPuertas }
         ETipo tipo;
 
+        #region CONSTRUCTORES
+        
         /// <summary>
         /// Por defecto, TIPO será CuatroPuertas
         /// </summary>
@@ -37,6 +39,8 @@ namespace Entidades
         {
             this.tipo = tipo;
         }
+
+        #endregion
 
         /// <summary>
         /// Sedan son 'Mediano'

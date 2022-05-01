@@ -30,28 +30,13 @@ namespace Entidades
             this.marca = marca;
             this.color = color;
         }
-
+        
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
         protected abstract ETamanio Tamanio { get; }
 
-        /// <summary>
-        /// Publica todos los datos del Vehiculo.
-        /// </summary>
-        /// <returns></returns>
-        public virtual string Mostrar()
-        {
-            StringBuilder retorno = new StringBuilder();
-
-            retorno.AppendLine(this.GetType().Name.ToUpper());
-            retorno.AppendLine((string)this);
-            retorno.AppendFormat("TAMAÑO : {0}", this.Tamanio);
-            retorno.AppendLine();
-            retorno.AppendLine("---------------------");
-
-            return retorno.ToString();
-        }
+        #region SOBRECARGAS
 
         /// <summary>
         /// "Castea a string" todos los detos de un vehiculo
@@ -90,5 +75,24 @@ namespace Entidades
         {
             return !(v1.chasis == v2.chasis);
         }
+
+        #endregion
+
+        /// <summary>
+        /// Publica todos los datos del Vehiculo.
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Mostrar()
+        {
+            StringBuilder retorno = new StringBuilder();
+
+            retorno.AppendLine(this.GetType().Name.ToUpper());
+            retorno.AppendLine((string)this);
+            retorno.AppendFormat("TAMAÑO : {0}", this.Tamanio);
+            retorno.AppendLine();
+            retorno.AppendLine("---------------------");
+
+            return retorno.ToString();
+        }        
     }
 }

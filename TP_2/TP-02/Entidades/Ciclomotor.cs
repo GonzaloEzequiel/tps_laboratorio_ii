@@ -22,20 +22,5 @@ namespace Entidades
                 return ETamanio.Chico;
             }
         }
-
-        //ESTE METODO NO TIENE NECESIDAD DE IMPLEMENTACION EN ESTA CLASE
-        //
-        //private override sealed string Mostrar()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-
-        //    sb.AppendLine("CICLOMOTOR");
-        //    sb.AppendLine(this.Mostrar());
-        //    sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-        //    sb.AppendLine("");
-        //    sb.AppendLine("---------------------");
-
-        //    return sb;
-        //}
     }
 }
