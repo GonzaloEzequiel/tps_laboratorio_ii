@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Biblioteca.Factura">
+    <Position X="10.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAEAAoAAAAKEgAAABIAAAEAAAABAAA=</HashCode>
+      <FileName>Factura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Persona">
+    <Position X="8.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAQAAAEkEAAAABAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Persona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.PagoFacil">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAIAAAAAEAAAABACAAAIACAAAAAgQAAAAAgAA=</HashCode>
+      <FileName>PagoFacil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Sucursal">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgACCAIAAAgAIAAkwCEAIAAAACAAAIAAAAAAhAAAAiA=</HashCode>
+      <FileName>Sucursal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Cliente">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAABAIAAAACAAAQAAAAEAAAA=</HashCode>
+      <FileName>Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.Empleado">
+    <Position X="5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAUEAAAAAAABABgAAQAQAQBAAEEQAAAAEA=</HashCode>
+      <FileName>Empleado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.FacturaVencidaException">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FacturaVencidaException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.SucursalException">
+    <Position X="12" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SucursalException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.MontoException">
+    <Position X="10.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MontoException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.GestorGerencial">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACABABAAAAAAAAAABACIAAAAAAQAACAAAAAIAAAg=</HashCode>
+      <FileName>GestorGerencial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Biblioteca.Encargado">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAABBABAAAAAAAAAAAAAYAIAAAA=</HashCode>
+      <FileName>Encargado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Biblioteca.IAdminGerencial">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAdminGerencial.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Biblioteca.IAdminSucursal">
+    <Position X="2.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAdminSucursal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
