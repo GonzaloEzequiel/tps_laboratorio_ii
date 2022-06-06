@@ -15,6 +15,7 @@ namespace Biblioteca
 
         static PagoFacil()
         {
+            gestorGerencial = new GestorGerencial();
             sucursales = new List<Sucursal>();
             recaudacion = 0;
             sueldoBasico = 40000f; //esto se leera desde un archivo

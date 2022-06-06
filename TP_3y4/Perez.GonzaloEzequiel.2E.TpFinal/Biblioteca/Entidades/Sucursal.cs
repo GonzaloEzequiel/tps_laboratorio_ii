@@ -16,7 +16,6 @@ namespace Biblioteca
         private string direccion;
         private List<Empleado> staff;
         private Queue<Cliente> colaAtencion;
-        //private List<Factura> facturasCobradas;
 
         static Sucursal()
         {
@@ -34,7 +33,6 @@ namespace Biblioteca
             this.staff = staff;
 
             this.colaAtencion = new Queue<Cliente>();
-            //this.facturasCobradas = new List<Factura>();
         }
 
         public float Caja { get { return this.caja; } set { this.caja = value; } }
@@ -42,7 +40,6 @@ namespace Biblioteca
         public string Direccion { get { return this.direccion; } } 
         public List<Empleado> Staff { get { return this.Staff; } }
         public Queue<Cliente> ColaAtencion { get { return this.colaAtencion; } }
-        //public List<Factura> FacturasCobradas { get { return this.facturasCobradas; } }
 
         #region SOBRECARGA
 
@@ -176,12 +173,16 @@ namespace Biblioteca
         }
 
         /// <summary>
-        /// COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR 
+        /// Muestra los datos de la Sucursal
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return "";
+            StringBuilder retorno = new StringBuilder();
+
+            retorno.AppendFormat("Sucursal número: {0,5} | {1,20} {2,20}", this.GetHashCode(), this.localidad, this.direccion);
+
+            return retorno.ToString();
         }
 
         #endregion

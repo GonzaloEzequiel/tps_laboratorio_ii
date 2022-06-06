@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
-    internal class GestorVisual<T, U>
+    public class GestorVisual<T, U>
         where T : class
         where U : class
     {
@@ -22,14 +22,22 @@ namespace Biblioteca
 
             retorno.AppendLine(Mostrar(contenedor));
             retorno.AppendLine($"Lista de {listado.GetType().Name}");
-            foreach(U item in listado)
+
+            try
             {
-                retorno.AppendLine("-----------------------------------------------------");
-                retorno.AppendLine(Mostrar(item));
+                foreach (U item in listado)
+                {
+                    retorno.AppendLine("-----------------------------------------------------");
+                    retorno.AppendLine(Mostrar(item));
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException("Sin elementos en la lista", ex);
             }
 
             return retorno.ToString();
-        }     
+        }
 
         /// <summary>
         /// Muestra todos los datos de la Clase

@@ -96,7 +96,7 @@ namespace Biblioteca
                 }
                 catch(Exception ex)
                 {
-                    throw new Exception("No se pudo una de las facturas", ex);
+                    throw new Exception("No se pudieron cobrar todas las facturas", ex);
                 }
                 finally
                 {
@@ -123,7 +123,6 @@ namespace Biblioteca
                 if(dinero >= factura.Monto)
                 {
                     this.Sucursal.Caja += factura.Monto;
-                    //this.Sucursal.FacturasCobradas.Add(factura);
                     factura.Pagada = true;
                 }
                 else

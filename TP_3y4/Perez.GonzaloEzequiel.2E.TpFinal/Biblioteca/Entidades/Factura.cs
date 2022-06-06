@@ -42,6 +42,34 @@ namespace Biblioteca
         #endregion
 
         /// <summary>
+        /// Muestra un detalle de la Factura
+        /// </summary>
+        /// <param name="factura"></param>
+        /// <returns></returns>
+        //public static string ImprimirFactura(Factura factura)
+        //{
+        //    StringBuilder retorno = new StringBuilder();
+
+        //    retorno.AppendLine(" __________________________________________ ");
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendFormat("|  {0,20}        Factura número: {1,10}  |", factura.EmpresaProveedora, factura.Numero);
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendFormat("|   Total a Pagar: ${0,10}       |", factura.Monto);
+        //    retorno.AppendFormat("|   Vencimiento: {0,XX/XX}       |", factura.FechaVencimiento);
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendFormat("|  {0, 20}               |", factura.Beneficiario.NombreCompleto);
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendLine("|  Servicios del mes en curso x1 u         |");
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendLine("|                  || ||||| ||| ||||||| |  |");
+        //    retorno.AppendLine("|                  || ||||| ||| ||||||| |  |");
+        //    retorno.AppendLine("|                                          |");
+        //    retorno.AppendLine("|__________________________________________|");
+
+        //    return retorno.ToString();
+        //}
+
+        /// <summary>
         /// Muestra todos los datos de una Factura
         /// </summary>
         /// <returns>string con los datos</returns>
@@ -49,7 +77,7 @@ namespace Biblioteca
         {
             StringBuilder retorno = new StringBuilder();
 
-            retorno.AppendFormat("Empresa: {0,20} | Factura número: {1,10}", this.EmpresaProveedora, this.Numero);
+            //retorno.AppendFormat("Empresa: {0,20} | Factura número: {1,10}", this.EmpresaProveedora, this.Numero);
             retorno.AppendFormat("Fecha de vencimiento: {0, XX/XX} | Monto a pagar: ${1,10}", this.FechaVencimiento, this.Monto);
 
             if(!this.Pagada)
